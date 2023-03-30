@@ -12,7 +12,16 @@ struct LoginButtonView: View {
     @Binding var password: String
     var body: some View {
         Button("Login") {
-            
+            let loginService = LoginService()
+            loginService.loginPost(username: username, password: password) {
+                success in
+                if success {
+                    print("login successful")
+                }
+                else {
+                    print("login failed")
+                }
+            }
         }
         .bold()
         .foregroundColor(.white)
@@ -47,7 +56,7 @@ struct RedirectLoginButton: View {
 
 struct RedirectSignUpView: View {
     var body: some View {
-        NavigationLink(destination: RegisterView().navigationBarBackButtonHidden(true)) {
+        NavigationLink(destination: RegisterPage().navigationBarBackButtonHidden(true)) {
             Text("Sign Up")
                 .bold()
                 .foregroundColor(.white)
@@ -60,9 +69,20 @@ struct RedirectSignUpView: View {
 
 
 struct SignUpView: View {
+    @Binding var email: String
+    @Binding var username: String
+    @Binding var password: String
+    @Binding var confirmPassword: String
     var body: some View {
         Button("Sign Up") {
-            
+            let registerPage = RegisterService()
+            registerPage.RegisterPost(email: email, username: username, password: password, confirmPassword: confirmPassword) { success in
+                if success {
+                    print("Registration successful")
+                } else {
+                    print("Registration failed")
+                }
+            }
         }
         .bold()
         .foregroundColor(.white)

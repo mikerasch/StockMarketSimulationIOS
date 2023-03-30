@@ -21,7 +21,7 @@ struct LoginPage: View {
                         .font(.largeTitle)
                         .bold()
                         .padding()
-                    UnsecureField(icon: "envelope", inputField: "Enter Email Address", email: $email)
+                    UnsecureField(icon: "envelope", inputField: "Enter Email Address", binding: $email)
                     SecureFieldPassword(icon: "lock", inputField: "Enter Password", password: $password)
                         .padding()
                     LoginButtonView(username: $email, password: $password)

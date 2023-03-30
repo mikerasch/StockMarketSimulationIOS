@@ -10,12 +10,16 @@ import Foundation
 class LoginService {
     // because async call, you should use completion
     func loginPost(username: String, password: String, completion: @escaping (Bool) -> Void) {
-        var request = URLRequest(url: URL(string: Constants.BASE_URL + "login")!)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(username, forHTTPHeaderField: "username")
-        request.setValue(password, forHTTPHeaderField: "password")
+        let data = ["email": username, "password": password]
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {
+            completion(false)
+            return
+        }
         
+        var request = URLRequest(url: URL(string: Constants.BASE_URL + "login")!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if error != nil {
                 completion(false)

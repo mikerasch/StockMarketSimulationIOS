@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegisterView: View {
+struct RegisterPage: View {
     @State private var emailAddress = "";
     @State private var username = "";
     @State private var password = "";
@@ -24,12 +24,12 @@ struct RegisterView: View {
                         .font(.largeTitle)
                         .bold()
                         .padding()
-                    UnsecureField(icon: "envelope", inputField: "Email Address", email: $emailAddress)
-                    UnsecureField(icon: "person.circle", inputField: "Username", email: $username)
-                    UnsecureField(icon: "lock", inputField: "Password", email: $password)
-                    UnsecureField(icon: "lock", inputField: "Confirm Password", email: $confirmPassword)
+                    UnsecureField(icon: "envelope", inputField: "Email Address", binding: $emailAddress)
+                    UnsecureField(icon: "person.circle", inputField: "Username", binding: $username)
+                    SecureFieldPassword(icon: "lock", inputField: "Password", password: $password)
+                    SecureFieldPassword(icon: "lock", inputField: "Confirm Password", password: $confirmPassword)
                         .padding(3)
-                    SignUpView()
+                    SignUpView(email: $emailAddress, username: $username, password: $password, confirmPassword: $confirmPassword)
                     Divider().frame(width: 300,height: 1).background(Color.black)
                         .padding(40)
                     RedirectLoginButton()
@@ -47,6 +47,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterPage()
     }
 }

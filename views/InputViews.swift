@@ -10,11 +10,11 @@ import SwiftUI
 struct UnsecureField: View {
     var icon: String
     var inputField: String
-    @Binding var email: String
+    @Binding var binding: String
     var body: some View {
         HStack {
             ZStack(alignment: .leading) {
-                TextField(inputField, text: $email)
+                TextField(inputField, text: $binding)
                     .bold()
                     .padding(.leading, 65)
                     .background(
@@ -75,7 +75,7 @@ struct SecureFieldPassword: View {
 
 struct InputViews_Previews: PreviewProvider {
     static var previews: some View {
-        UnsecureField(icon: "envelope", inputField: "Enter Email Address", email: .constant(String()))
+        UnsecureField(icon: "envelope", inputField: "Enter Email Address", binding: .constant(String()))
         SecureFieldPassword(icon: "lock", inputField: "Enter Password", password: .constant(String()))
     }
 }
