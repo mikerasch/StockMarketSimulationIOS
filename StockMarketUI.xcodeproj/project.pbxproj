@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277D31CF29D538A0009A16AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31CE29D538A0009A16AC /* Constants.swift */; };
+		277D31D129D53931009A16AC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31D029D53931009A16AC /* LoginService.swift */; };
+		277D31D329D53D84009A16AC /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31D229D53D84009A16AC /* RegisterService.swift */; };
 		27A3FD2929D2598100F3DC75 /* StockMarketUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD2829D2598100F3DC75 /* StockMarketUIApp.swift */; };
-		27A3FD2B29D2598100F3DC75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD2A29D2598100F3DC75 /* ContentView.swift */; };
+		27A3FD2B29D2598100F3DC75 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD2A29D2598100F3DC75 /* LoginPage.swift */; };
 		27A3FD2D29D2598400F3DC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FD2C29D2598400F3DC75 /* Assets.xcassets */; };
 		27A3FD3029D2598400F3DC75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FD2F29D2598400F3DC75 /* Preview Assets.xcassets */; };
 		27A3FD3A29D2598400F3DC75 /* StockMarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD3929D2598400F3DC75 /* StockMarketUITests.swift */; };
 		27A3FD4429D2598400F3DC75 /* StockMarketUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD4329D2598400F3DC75 /* StockMarketUIUITests.swift */; };
 		27A3FD4629D2598400F3DC75 /* StockMarketUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD4529D2598400F3DC75 /* StockMarketUIUITestsLaunchTests.swift */; };
+		27A3FD5429D2754A00F3DC75 /* InputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD5329D2754A00F3DC75 /* InputViews.swift */; };
+		27A3FD5629D27CAB00F3DC75 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */; };
+		27A3FD5929D2803700F3DC75 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD5829D2803700F3DC75 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		277D31CE29D538A0009A16AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		277D31D029D53931009A16AC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		277D31D229D53D84009A16AC /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		27A3FD2529D2598100F3DC75 /* StockMarketUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockMarketUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A3FD2829D2598100F3DC75 /* StockMarketUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketUIApp.swift; sourceTree = "<group>"; };
-		27A3FD2A29D2598100F3DC75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27A3FD2A29D2598100F3DC75 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		27A3FD2C29D2598400F3DC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27A3FD2F29D2598400F3DC75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27A3FD3529D2598400F3DC75 /* StockMarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockMarketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +53,9 @@
 		27A3FD3F29D2598400F3DC75 /* StockMarketUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockMarketUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A3FD4329D2598400F3DC75 /* StockMarketUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketUIUITests.swift; sourceTree = "<group>"; };
 		27A3FD4529D2598400F3DC75 /* StockMarketUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27A3FD5329D2754A00F3DC75 /* InputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViews.swift; sourceTree = "<group>"; };
+		27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
+		27A3FD5829D2803700F3DC75 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +83,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277D31CD29D53818009A16AC /* api */ = {
+			isa = PBXGroup;
+			children = (
+				277D31CE29D538A0009A16AC /* Constants.swift */,
+				277D31D029D53931009A16AC /* LoginService.swift */,
+				277D31D229D53D84009A16AC /* RegisterService.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 		27A3FD1C29D2598100F3DC75 = {
 			isa = PBXGroup;
 			children = (
+				277D31CD29D53818009A16AC /* api */,
+				27A3FD5729D27E1500F3DC75 /* pages */,
+				27A3FD5229D2728700F3DC75 /* views */,
 				27A3FD2729D2598100F3DC75 /* StockMarketUI */,
 				27A3FD3829D2598400F3DC75 /* StockMarketUITests */,
 				27A3FD4229D2598400F3DC75 /* StockMarketUIUITests */,
@@ -95,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				27A3FD2829D2598100F3DC75 /* StockMarketUIApp.swift */,
-				27A3FD2A29D2598100F3DC75 /* ContentView.swift */,
 				27A3FD2C29D2598400F3DC75 /* Assets.xcassets */,
 				27A3FD2E29D2598400F3DC75 /* Preview Content */,
 			);
@@ -125,6 +149,24 @@
 				27A3FD4529D2598400F3DC75 /* StockMarketUIUITestsLaunchTests.swift */,
 			);
 			path = StockMarketUIUITests;
+			sourceTree = "<group>";
+		};
+		27A3FD5229D2728700F3DC75 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				27A3FD5329D2754A00F3DC75 /* InputViews.swift */,
+				27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		27A3FD5729D27E1500F3DC75 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				27A3FD2A29D2598100F3DC75 /* LoginPage.swift */,
+				27A3FD5829D2803700F3DC75 /* RegisterView.swift */,
+			);
+			path = pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A3FD2B29D2598100F3DC75 /* ContentView.swift in Sources */,
+				27A3FD2B29D2598100F3DC75 /* LoginPage.swift in Sources */,
+				27A3FD5929D2803700F3DC75 /* RegisterView.swift in Sources */,
+				27A3FD5429D2754A00F3DC75 /* InputViews.swift in Sources */,
+				27A3FD5629D27CAB00F3DC75 /* ButtonViews.swift in Sources */,
 				27A3FD2929D2598100F3DC75 /* StockMarketUIApp.swift in Sources */,
+				277D31CF29D538A0009A16AC /* Constants.swift in Sources */,
+				277D31D329D53D84009A16AC /* RegisterService.swift in Sources */,
+				277D31D129D53931009A16AC /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
