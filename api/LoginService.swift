@@ -27,14 +27,43 @@ class LoginService {
             }
             if let httpStatus = response as? HTTPURLResponse {
                 if httpStatus.statusCode == 200 {
-                    // todo add information of body to a user class
-                    completion(true)
-                    return
+                    let responseBodyString = String(data: data!, encoding: .utf8)
+                    if var json = self.parseDataToJson(responseBody: responseBodyString!) {
+                        self.storeUserData(json: json)
+                        // todo add information of body to a user class
+                        completion(true)
+                        return
+                    }
                 }
             }
             completion(false)
         }
         task.resume()
     }
-
+    
+    func parseDataToJson(responseBody: String) -> [String: Any]? {
+        if let jsonData = responseBody.data(using: .utf8) {
+            do {
+                let json = try JSONSerialization.jsonObject(with: jsonData, options: [])
+                return json as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil;
+    }
+    
+    func storeUserData(json: [String: Any]) {
+        let user = User.instance
+        
+        if let token = json["Token"] as? String {
+            user.setBearerToken(bearerToken: token)
+        }
+        if let username = json["Username"] as? String {
+            user.setUsername(username: username)
+        }
+        if let email = json["Email"] as? String {
+            user.setEmail(email: email)
+        }
+    }
 }
