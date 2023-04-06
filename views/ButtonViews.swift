@@ -44,6 +44,17 @@ struct ForgotButtonView: View {
     }
 }
 
+struct ContactUsView: View {
+    var body: some View {
+        Button(action: {
+            
+        }) {
+            Text("Contact Us")
+                .foregroundColor(Color("BackgroundText"))
+        }
+    }
+}
+
 struct RedirectLoginButton: View {
     var body: some View {
         NavigationLink(destination: LoginPage().navigationBarBackButtonHidden(true)) {
@@ -96,5 +107,6 @@ struct ButtonViews_Previews: PreviewProvider {
     static var previews: some View {
         LoginButtonView(username: .constant(""),password: .constant(""))
         ForgotButtonView()
+        ContactUsView()
     }
 }

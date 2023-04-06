@@ -28,7 +28,7 @@ class LoginService {
             if let httpStatus = response as? HTTPURLResponse {
                 if httpStatus.statusCode == 200 {
                     let responseBodyString = String(data: data!, encoding: .utf8)
-                    if var json = self.parseDataToJson(responseBody: responseBodyString!) {
+                    if let json = self.parseDataToJson(responseBody: responseBodyString!) {
                         self.storeUserData(json: json)
                         // todo add information of body to a user class
                         completion(true)

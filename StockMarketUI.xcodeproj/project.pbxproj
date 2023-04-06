@@ -21,6 +21,8 @@
 		27A3FD5629D27CAB00F3DC75 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */; };
 		27A3FD5929D2803700F3DC75 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FD5829D2803700F3DC75 /* RegisterPage.swift */; };
 		27D390B429DB42A300E5E2FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D390B329DB42A300E5E2FC /* User.swift */; };
+		27D390B829DE6E7F00E5E2FC /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D390B729DE6E7F00E5E2FC /* HomePage.swift */; };
+		27D390BA29DE6F3000E5E2FC /* HomeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D390B929DE6F3000E5E2FC /* HomeViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
 		27A3FD5829D2803700F3DC75 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		27D390B329DB42A300E5E2FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27D390B729DE6E7F00E5E2FC /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		27D390B929DE6F3000E5E2FC /* HomeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			children = (
 				27A3FD5329D2754A00F3DC75 /* InputViews.swift */,
 				27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */,
+				27D390B929DE6F3000E5E2FC /* HomeViews.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			children = (
 				27A3FD2A29D2598100F3DC75 /* LoginPage.swift */,
 				27A3FD5829D2803700F3DC75 /* RegisterPage.swift */,
+				27D390B729DE6E7F00E5E2FC /* HomePage.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				27A3FD5429D2754A00F3DC75 /* InputViews.swift in Sources */,
 				27A3FD5629D27CAB00F3DC75 /* ButtonViews.swift in Sources */,
 				27A3FD2929D2598100F3DC75 /* StockMarketUIApp.swift in Sources */,
+				27D390B829DE6E7F00E5E2FC /* HomePage.swift in Sources */,
+				27D390BA29DE6F3000E5E2FC /* HomeViews.swift in Sources */,
 				27D390B429DB42A300E5E2FC /* User.swift in Sources */,
 				277D31CF29D538A0009A16AC /* Constants.swift in Sources */,
 				277D31D329D53D84009A16AC /* RegisterService.swift in Sources */,
