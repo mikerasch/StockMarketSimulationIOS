@@ -30,7 +30,6 @@ class LoginService {
                     let responseBodyString = String(data: data!, encoding: .utf8)
                     if let json = self.parseDataToJson(responseBody: responseBodyString!) {
                         self.storeUserData(json: json)
-                        // todo add information of body to a user class
                         completion(true)
                         return
                     }
@@ -56,13 +55,13 @@ class LoginService {
     func storeUserData(json: [String: Any]) {
         let user = User.instance
         
-        if let token = json["Token"] as? String {
+        if let token = json["token"] as? String {
             user.setBearerToken(bearerToken: token)
         }
-        if let username = json["Username"] as? String {
+        if let username = json["username"] as? String {
             user.setUsername(username: username)
         }
-        if let email = json["Email"] as? String {
+        if let email = json["email"] as? String {
             user.setEmail(email: email)
         }
     }

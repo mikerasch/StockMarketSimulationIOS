@@ -10,13 +10,17 @@ import SwiftUI
 struct LoginButtonView: View {
     @Binding var username: String
     @Binding var password: String
+    @State private var isLoggedIn = false
     var body: some View {
+        NavigationLink(destination: HomePage().navigationBarHidden(true), isActive: $isLoggedIn) {
+            EmptyView()
+        }
         Button("Login") {
             let loginService = LoginService()
             loginService.loginPost(username: username, password: password) {
                 success in
                 if success {
-                    print("login successful")
+                    isLoggedIn = true
                 }
                 else {
                     print("login failed")

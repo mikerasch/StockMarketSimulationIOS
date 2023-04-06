@@ -15,12 +15,12 @@ struct HomePage: View {
                     .ignoresSafeArea(.all)
                 VStack(spacing: 90) {
                     HStack(spacing: 20) {
-                        HomeViews(icon: "magnifyingglass")
-                        HomeViews(icon: "dollarsign.square")
+                        HomeViews(icon: "magnifyingglass",destination: "searchStocks")
+                        HomeViews(icon: "dollarsign.square",destination: "fill")
                     }
                     HStack(spacing: 20) {
-                        HomeViews(icon: "person.circle")
-                        HomeViews(icon: "chart.bar.fill")
+                        HomeViews(icon: "person.circle",destination: "fill")
+                        HomeViews(icon: "chart.bar.fill",destination: "fill")
                     }
                     Divider().frame(width: 300,height: 1).background(Color.black)
                     ContactUsView()
