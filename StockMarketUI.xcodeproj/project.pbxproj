@@ -10,6 +10,9 @@
 		277C1FD129DF6060003A0723 /* StockSearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FD029DF6060003A0723 /* StockSearchPage.swift */; };
 		277C1FD329DF61C5003A0723 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FD229DF61C5003A0723 /* StockView.swift */; };
 		277C1FD629DF6572003A0723 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FD529DF6572003A0723 /* Stock.swift */; };
+		277C1FD829E87747003A0723 /* BuyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FD729E87747003A0723 /* BuyPage.swift */; };
+		277C1FDA29E87C4A003A0723 /* BuyPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FD929E87C4A003A0723 /* BuyPageViews.swift */; };
+		277C1FDD29E87F1C003A0723 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FDC29E87F1C003A0723 /* UserService.swift */; };
 		277D31CF29D538A0009A16AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31CE29D538A0009A16AC /* Constants.swift */; };
 		277D31D129D53931009A16AC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31D029D53931009A16AC /* LoginService.swift */; };
 		277D31D329D53D84009A16AC /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31D229D53D84009A16AC /* RegisterService.swift */; };
@@ -49,6 +52,9 @@
 		277C1FD029DF6060003A0723 /* StockSearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchPage.swift; sourceTree = "<group>"; };
 		277C1FD229DF61C5003A0723 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
 		277C1FD529DF6572003A0723 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		277C1FD729E87747003A0723 /* BuyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPage.swift; sourceTree = "<group>"; };
+		277C1FD929E87C4A003A0723 /* BuyPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPageViews.swift; sourceTree = "<group>"; };
+		277C1FDC29E87F1C003A0723 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		277D31CE29D538A0009A16AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		277D31D029D53931009A16AC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		277D31D229D53D84009A16AC /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 				277D31CE29D538A0009A16AC /* Constants.swift */,
 				277D31D029D53931009A16AC /* LoginService.swift */,
 				277D31D229D53D84009A16AC /* RegisterService.swift */,
+				277C1FDC29E87F1C003A0723 /* UserService.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 				27A3FD5529D27CAB00F3DC75 /* ButtonViews.swift */,
 				27D390B929DE6F3000E5E2FC /* HomeViews.swift */,
 				277C1FD229DF61C5003A0723 /* StockView.swift */,
+				277C1FD929E87C4A003A0723 /* BuyPageViews.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 				27A3FD5829D2803700F3DC75 /* RegisterPage.swift */,
 				27D390B729DE6E7F00E5E2FC /* HomePage.swift */,
 				277C1FD029DF6060003A0723 /* StockSearchPage.swift */,
+				277C1FD729E87747003A0723 /* BuyPage.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -339,9 +348,12 @@
 				277C1FD129DF6060003A0723 /* StockSearchPage.swift in Sources */,
 				27A3FD5629D27CAB00F3DC75 /* ButtonViews.swift in Sources */,
 				27A3FD2929D2598100F3DC75 /* StockMarketUIApp.swift in Sources */,
+				277C1FDD29E87F1C003A0723 /* UserService.swift in Sources */,
 				27D390B829DE6E7F00E5E2FC /* HomePage.swift in Sources */,
 				27D390BA29DE6F3000E5E2FC /* HomeViews.swift in Sources */,
+				277C1FDA29E87C4A003A0723 /* BuyPageViews.swift in Sources */,
 				27D390B429DB42A300E5E2FC /* User.swift in Sources */,
+				277C1FD829E87747003A0723 /* BuyPage.swift in Sources */,
 				277D31CF29D538A0009A16AC /* Constants.swift in Sources */,
 				277C1FD629DF6572003A0723 /* Stock.swift in Sources */,
 				277D31D329D53D84009A16AC /* RegisterService.swift in Sources */,

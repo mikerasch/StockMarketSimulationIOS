@@ -14,11 +14,13 @@ class User {
     var username: String
     var email: String
     var bearerToken: String
+    var balance: String
     
     public init() {
         username = "";
         email = "";
         bearerToken = "";
+        balance = "";
     }
     
     func setUsername(username: String) {
@@ -32,6 +34,9 @@ class User {
     func setBearerToken(bearerToken: String) {
         self.bearerToken = bearerToken
     }
+    func setBalance(balance: String) {
+        self.balance = balance
+    }
     
     func getUsername() -> String {
         return username;
@@ -43,5 +48,8 @@ class User {
     
     func getBearerToken() -> String {
         return bearerToken;
+    }
+    func getBalance() -> String {
+        return balance;
     }
 }

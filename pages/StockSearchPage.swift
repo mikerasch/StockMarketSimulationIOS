@@ -17,13 +17,17 @@ struct StockSearchPage: View {
                 StockView(searchText: $searchText, stockModel: model)
                     .padding(.top,50)
                 ScrollView {
-                    VStack {
+                    VStack(spacing: 10) {
                         ForEach(model.stockCollection) { stock in
-                            StockRow(stock: stock)
+                            NavigationLink(destination: BuyPage(stock: stock)) {
+                                StockRow(stock: stock)
+                            }
+                            Divider()
                         }
                     }
+                    .listStyle(InsetListStyle())
                 }
-                .listStyle(InsetListStyle())
+                .padding(.top, 30)
                 Spacer()
             }
         }
@@ -36,14 +40,16 @@ struct StockRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(stock.name)
+                .foregroundColor(Color(.black))
                 .fontWeight(.heavy)
             HStack {
                 Text(stock.exchange)
                     .foregroundColor(Color(.gray))
                 Spacer()
                 Text(stock.symbol)
+                    .foregroundColor(Color(.black))
                     .bold()
-                    .offset(y: -10)
+                    .offset(y: -15)
                     .padding(.trailing,20)
             }
         }

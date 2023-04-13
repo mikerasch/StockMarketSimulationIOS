@@ -30,7 +30,6 @@ class RegisterService {
                     completion(true)
                     return
                 }
-                print(httpStatus.description)
             }
             completion(false)
         }
