@@ -34,7 +34,7 @@ struct DisplayStockInformationView: View {
 struct RectangleView: View {
     var boxInformation: String
     var body: some View {
-        Rectangle()
+        RoundedRectangle(cornerRadius: 25)
             .fill(Color("ButtonBackground"))
             .frame(width: 162, height: 150)
             .overlay(
@@ -46,7 +46,7 @@ struct RectangleView: View {
 }
 
 struct StockCountView: View {
-    @State var count: Int = 0
+    @Binding var count: Int
     var price: Double
     @State var displayPrice = 0.0
     var body: some View {
@@ -86,20 +86,43 @@ struct StockCountView: View {
 }
 
 struct PurchaseStock: View {
+    var ticker: String
+    var amountOfShares: String
+    @State private var showPurchaseSuccessPopup = false
+    @State private var showPurchaseFailurePopup = false
     var body: some View {
+        Button(action: {
+            let stockTrader = StockTrader()
+            stockTrader.purchaseStock(ticker: ticker, amountOfShares: amountOfShares) {
+                success in
+                if success {
+                    showPurchaseSuccessPopup = true
+                }
+                else {
+                    showPurchaseFailurePopup = true
+                }
+            }
+        }) {
             Text("Purchase")
                 .bold()
                 .foregroundColor(.white)
                 .frame(width: 186, height: 45)
                 .background(Color("ButtonBackground"))
                 .cornerRadius(20)
+        }
+        .alert(isPresented: $showPurchaseSuccessPopup) {
+            Alert(title: Text("Purchase successful"), message: Text("Your stock purchase was successful."), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $showPurchaseFailurePopup) {
+            Alert(title: Text("Purchase failed"), message: Text("Your stock purchase was not successful."), dismissButton: .default(Text("OK")))
+        }
     }
 }
+
 
 struct BuyPageViews_Previews: PreviewProvider {
     static var previews: some View {
         DisplayPriceView(price: "$20.00")
         DisplayStockInformationView(stock: Stock(symbol: "a", name: "a", exchange: "a", assetType: "a", ipoDate: "a", delistingDate: "a", status: "a"))
-        StockCountView(price: 222)
     }
 }

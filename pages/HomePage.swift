@@ -16,7 +16,7 @@ struct HomePage: View {
                 VStack(spacing: 90) {
                     HStack(spacing: 20) {
                         HomeViews(icon: "magnifyingglass",destination: "searchStocks")
-                        HomeViews(icon: "dollarsign.square",destination: "fill")
+                        HomeViews(icon: "dollarsign.square",destination: "viewStocksOwned")
                     }
                     HStack(spacing: 20) {
                         HomeViews(icon: "person.circle",destination: "fill")

@@ -28,15 +28,15 @@ struct HomeViews: View {
     func getDestinationView() -> some View {
         switch destination {
         case "searchStocks":
-            return StockSearchPage(searchText: "")
-        case "filler":
-            return StockSearchPage(searchText: "")
+            return AnyView(StockSearchPage(searchText: ""))
+        case "viewStocksOwned":
+            return AnyView(DisplayStocksOwnedPage())
         case "filler1":
-            return StockSearchPage(searchText: "")
+            return AnyView(StockSearchPage(searchText: ""))
         case "filler2":
-            return StockSearchPage(searchText: "")
+            return AnyView(StockSearchPage(searchText: ""))
         default:
-            return StockSearchPage(searchText: "")
+            return AnyView(StockSearchPage(searchText: ""))
         }
     }
 }

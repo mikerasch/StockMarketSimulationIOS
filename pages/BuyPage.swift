@@ -11,6 +11,7 @@ struct BuyPage: View {
     @State var balance = ""
     @State var stock: Stock
     @State var priceOfStock = ""
+    @State var countOfStock = 0
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
@@ -40,10 +41,10 @@ struct BuyPage: View {
                     .padding(20)
                 Text(stock.name)
                     .bold()
-                    .font(.title)
+                    .font(.title2)
                 Text("Price: $" + priceOfStock)
                     .bold()
-                    .font(.title)
+                    .font(.title3)
                 HStack {
                     RectangleView(boxInformation: stock.symbol)
                     RectangleView(boxInformation: stock.exchange)
@@ -52,9 +53,8 @@ struct BuyPage: View {
                     RectangleView(boxInformation: stock.assetType)
                     RectangleView(boxInformation: "filler")
                 }
-
-                StockCountView(price: Double(priceOfStock) ?? 5.0)
-                PurchaseStock()
+                StockCountView(count: $countOfStock, price: Double(priceOfStock) ?? 0)
+                PurchaseStock(ticker: stock.symbol, amountOfShares: String(countOfStock))
             }
             .padding(.top, 30)
         }

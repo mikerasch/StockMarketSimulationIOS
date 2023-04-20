@@ -57,10 +57,12 @@ class UserService {
                     if let jsonData = data {
                         do {
                             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-                                print(json)
                                 if let stockPrice = json["05. price"] as? String {
-                                    completion(true,stockPrice)
-                                    return
+                                    if let stockPriceDouble = Double(stockPrice) {
+                                        let formattedStockPrice = String(format: "%.2f", stockPriceDouble)
+                                        completion(true, formattedStockPrice)
+                                        return
+                                    }
                                 }
                             }
                         } catch {
