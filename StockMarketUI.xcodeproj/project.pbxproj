@@ -19,6 +19,8 @@
 		277C1FE929F1D3DE003A0723 /* DisplayStocksOwnedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FE829F1D3DE003A0723 /* DisplayStocksOwnedPage.swift */; };
 		277C1FEB29F1D4AD003A0723 /* DisplayStocksOwnedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FEA29F1D4AD003A0723 /* DisplayStocksOwnedViews.swift */; };
 		277C1FED29F1D792003A0723 /* StocksOwned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FEC29F1D792003A0723 /* StocksOwned.swift */; };
+		277C1FEF29FB2AAE003A0723 /* StockSellPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FEE29FB2AAE003A0723 /* StockSellPage.swift */; };
+		277C1FF129FB2D9C003A0723 /* StockSellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C1FF029FB2D9C003A0723 /* StockSellView.swift */; };
 		277D31CF29D538A0009A16AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31CE29D538A0009A16AC /* Constants.swift */; };
 		277D31D129D53931009A16AC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31D029D53931009A16AC /* LoginService.swift */; };
 		277D31D329D53D84009A16AC /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D31D229D53D84009A16AC /* RegisterService.swift */; };
@@ -67,6 +69,8 @@
 		277C1FE829F1D3DE003A0723 /* DisplayStocksOwnedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayStocksOwnedPage.swift; sourceTree = "<group>"; };
 		277C1FEA29F1D4AD003A0723 /* DisplayStocksOwnedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayStocksOwnedViews.swift; sourceTree = "<group>"; };
 		277C1FEC29F1D792003A0723 /* StocksOwned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksOwned.swift; sourceTree = "<group>"; };
+		277C1FEE29FB2AAE003A0723 /* StockSellPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSellPage.swift; sourceTree = "<group>"; };
+		277C1FF029FB2D9C003A0723 /* StockSellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSellView.swift; sourceTree = "<group>"; };
 		277D31CE29D538A0009A16AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		277D31D029D53931009A16AC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		277D31D229D53D84009A16AC /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				277C1FD929E87C4A003A0723 /* BuyPageViews.swift */,
 				277C1FE429F0BFBF003A0723 /* SettingView.swift */,
 				277C1FEA29F1D4AD003A0723 /* DisplayStocksOwnedViews.swift */,
+				277C1FF029FB2D9C003A0723 /* StockSellView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				277C1FD729E87747003A0723 /* BuyPage.swift */,
 				277C1FDE29F0BF38003A0723 /* SettingsPage.swift */,
 				277C1FE829F1D3DE003A0723 /* DisplayStocksOwnedPage.swift */,
+				277C1FEE29FB2AAE003A0723 /* StockSellPage.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				27A3FD5929D2803700F3DC75 /* RegisterPage.swift in Sources */,
 				277C1FEB29F1D4AD003A0723 /* DisplayStocksOwnedViews.swift in Sources */,
 				277C1FE729F1C86A003A0723 /* StockTrader.swift in Sources */,
+				277C1FF129FB2D9C003A0723 /* StockSellView.swift in Sources */,
 				27A3FD5429D2754A00F3DC75 /* InputViews.swift in Sources */,
 				277C1FD129DF6060003A0723 /* StockSearchPage.swift in Sources */,
 				27A3FD5629D27CAB00F3DC75 /* ButtonViews.swift in Sources */,
@@ -383,6 +390,7 @@
 				277D31D329D53D84009A16AC /* RegisterService.swift in Sources */,
 				277D31D129D53931009A16AC /* LoginService.swift in Sources */,
 				277C1FD329DF61C5003A0723 /* StockView.swift in Sources */,
+				277C1FEF29FB2AAE003A0723 /* StockSellPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

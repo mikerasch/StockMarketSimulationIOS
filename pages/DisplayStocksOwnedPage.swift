@@ -30,13 +30,20 @@ struct DisplayStocksOwnedPage: View {
             }
         }
         .onAppear {
-            model.viewStocks() {
-                success in
-                if success {
-                    isLoading = false
+            Task {
+                do {
+                    let success = try await model.viewStocks() {
+                        good in
+                        if good {
+                            isLoading = false;
+                        }
+                    }
+                } catch {
+                    print("Error: \(error)")
                 }
             }
         }
+
     }
 }
 

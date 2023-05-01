@@ -16,7 +16,6 @@ class Stocks: ObservableObject {
             if let httpStatus = response as? HTTPURLResponse {
                 if httpStatus.statusCode == 200 {
                     let responseBodyString = String(data: data!, encoding: .utf8)
-                    print(responseBodyString)
                     if let json = self.parseDataToJson(responseBody: responseBodyString!) {
                         self.storeUserData(json: json)
                         return
