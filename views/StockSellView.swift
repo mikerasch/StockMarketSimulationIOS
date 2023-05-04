@@ -10,18 +10,26 @@ import SwiftUI
 struct StockSellView: View {
     var stock: StocksOwned
     var amount: Int
-    @State private var showSellSuccessPopup = false
-    @State private var showSellFailurePopup = false
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+
+    func showAlert(title: String, message: String) {
+        self.alertTitle = title
+        self.alertMessage = message
+        self.showAlert = true
+    }
+    
     var body: some View {
         Button(action: {
             let stockTrader = StockTrader()
             stockTrader.sellStocks(ticker: stock.ticker, amount: amount) {
                 success in
                 if success {
-                    showSellSuccessPopup = true
+                    showAlert(title: "Success", message: "Successfuly Sold " + String(amount) + " of shares of " + stock.ticker)
                 }
                 else {
-                    showSellFailurePopup = true
+                    showAlert(title: "Error", message: "Could not sell shares, please try again later")
                 }
             }
         }) {
@@ -32,12 +40,13 @@ struct StockSellView: View {
                 .background(Color("ButtonBackground"))
                 .cornerRadius(20)
         }
-//        .alert(isPresented: $showSellSuccessPopup) {
-//            Alert(title: Text("Sale successful"), message: Text("Your stock sale was successful."), dismissButton: .default(Text("OK")))
-//        }
-//        .alert(isPresented: $showSellFailurePopup) {
-//            Alert(title: Text("Sale failed"), message: Text("Your stock sale was not successful."), dismissButton: .default(Text("OK")))
-//        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(alertTitle),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 

@@ -12,7 +12,6 @@ struct RegisterPage: View {
     @State private var username = "";
     @State private var password = "";
     @State private var confirmPassword = "";
-    
     var body: some View {
         NavigationView {
             ZStack {

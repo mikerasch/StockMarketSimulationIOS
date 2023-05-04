@@ -88,18 +88,25 @@ struct StockCountView: View {
 struct PurchaseStock: View {
     var ticker: String
     var amountOfShares: String
-    @State private var showPurchaseSuccessPopup = false
-    @State private var showPurchaseFailurePopup = false
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+
+    func showAlert(title: String, message: String) {
+        self.alertTitle = title
+        self.alertMessage = message
+        self.showAlert = true
+    }
     var body: some View {
         Button(action: {
             let stockTrader = StockTrader()
             stockTrader.purchaseStock(ticker: ticker, amountOfShares: amountOfShares) {
                 success in
                 if success {
-                    showPurchaseSuccessPopup = true
+                    showAlert(title: "Successfully Bought Stock!", message: "You purchased " + amountOfShares + " shares of " + ticker)
                 }
                 else {
-                    showPurchaseFailurePopup = true
+                    showAlert(title: "Could Not Purchase Stock!", message: "This could be due to low balance, or bad code")
                 }
             }
         }) {
@@ -110,11 +117,12 @@ struct PurchaseStock: View {
                 .background(Color("ButtonBackground"))
                 .cornerRadius(20)
         }
-        .alert(isPresented: $showPurchaseSuccessPopup) {
-            Alert(title: Text("Purchase successful"), message: Text("Your stock purchase was successful."), dismissButton: .default(Text("OK")))
-        }
-        .alert(isPresented: $showPurchaseFailurePopup) {
-            Alert(title: Text("Purchase failed"), message: Text("Your stock purchase was not successful."), dismissButton: .default(Text("OK")))
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(alertTitle),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
         }
     }
 }
