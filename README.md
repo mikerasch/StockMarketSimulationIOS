@@ -22,6 +22,16 @@ the glamorous riches that comes with real money.
 - Registration should be more strict in validation purposes. Such as increasing the password strength needed. 
 - Viewing all stocks searched is handled on a background thread and is not properly dispatched to the main thread. This needs to be fixed. 
 
+## To-Do
+- Make UI better looking across all pages.
+- Add in depth charts of portfolio, stocks, and history of exchanges.
+- Add function to start with whatever amount of money the user wants.
+- Add news section.
+- Add reset option.
+- Add password changing functionality.
+- Add contact us functionality.
+- Add profile viewing functionality.
+
 ## Pre Requisites
 - Basic knowledge of HTTP requests and bearer tokens.
 - Experience with Swift-UI/Swift
